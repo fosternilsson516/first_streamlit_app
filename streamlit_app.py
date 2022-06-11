@@ -16,5 +16,5 @@ df = my_fruit_list.set_index('fruit')
 streamlit.multiselect("pick some fruits:" , list(my_fruit_list.index))
 
 
-streamlit.dataframe(my_fruit_list) = df
+streamlit.dataframe(my_fruit_list) 
 

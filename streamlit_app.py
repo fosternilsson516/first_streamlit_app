@@ -33,7 +33,7 @@ try:
    fruityvice_response = requests.get("http://fruityvice.com/api/fruit/watermelon")
    fruityvice_normalized = pd.json_normalize(fruityvice_response.json())
    streamlit.dataframe(fruityvice_normalized)
-
+   
 except url as e:
  streamlit.error()
 

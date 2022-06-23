@@ -25,8 +25,7 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 streamlit.dataframe(fruits_to_show) 
 
 streamlit.header('fruityvice fruit advice')
-try:
-fruit_choice = streamlit.text_input('what fruit would you like information about?')
+try:fruit_choice = streamlit.text_input('what fruit would you like information about?')
 if not fruit_choice
 streamlit.error("please select a fruit to get information")
 else
@@ -51,7 +50,7 @@ streamlit.header("The fruit list contains")
 streamlit.dataframe(my_data_rows)
 
 add_fruit = streamlit.text_input('What fruit would you like to add')
- streamlit.write('Thank you for adding', add_fruit)
+streamlit.write('Thank you for adding', add_fruit)
 
 my_cur.execute("insert into fruit_load_list values ('from streamlit')")
 

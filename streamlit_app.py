@@ -35,7 +35,7 @@ try:
  if not fruit_choice:
    streamlit.error("please select a fruit to get information")
  else:
-  #back_from_function = get_fruityvice_data(fruit_choice)
+  back_from_function = get_fruityvice_data(fruit_choice)
   streamlit.dataframe(back_from_function)
   
 except url as e:
@@ -56,7 +56,7 @@ if streamlit.button('get fruit load list'):
  my_cnx.close()
  streamlit.dataframe(my_data_rows)
   
- def insert_row_snowflake(new_fruit):
+def insert_row_snowflake(new_fruit):
   with my_cnx.cursor() as my_cur:
    my_cur.execute("insert into fruit_load_list values ('" + add_my_fruit + "')")
    return "thanks for adding " + new_fruit

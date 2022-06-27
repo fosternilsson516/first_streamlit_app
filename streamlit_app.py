@@ -35,8 +35,7 @@ try:
  if not fruit_choice:
    streamlit.error("please select a fruit to get information")
  else:
-  back_from_function = get_fruityvice_data(fruit_choice)\
-  my_cnx.close()
+  back_from_function = get_fruityvice_data(fruit_choice)
   streamlit.dataframe(back_from_function)
   
 except url as e:
@@ -69,5 +68,5 @@ if streamlit.button('add a fruit to the list'):
  my_cnx.close()
  streamlit.text(back_from_function)
 
-
+streamlit.stop()
 
